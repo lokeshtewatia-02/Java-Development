@@ -9,14 +9,23 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
         <!-- this is owr beans -->
+<bean  class="com.springcore.ci.Certi" name="cer">
 
+   <constructor-arg value="Android using kotlin" />
+
+</bean>
 
 <bean class="com.springcore.ci.Person" name="person">
     <constructor-arg value="Ajay"/>
-   
-  
-
+    <constructor-arg value="16"/>
+    <constructor-arg ref="cer" />
+    
 </bean>
+        
+        <bean class="com.springcore.ci.Addition" name="add">
+        <constructor-arg value="15" type="int"/>
+        <constructor-arg value="55" type="int" />
+        </bean>
         
 </beans>
 
